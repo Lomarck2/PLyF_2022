@@ -1,6 +1,6 @@
 arista(n11,n12).
 arista(n11,n21).
-arista(n12,n11)
+arista(n12,n11).
 arista(n12,n13).
 arista(n12,n22).
 arista(n13,n14).
