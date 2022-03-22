@@ -29,3 +29,12 @@ arista(n42,n43).
 arista(n43,n42).
 arista(n43,n44).
 arista(n44,n43).
+
+listaVecinos(Nodo,ListaVecinos):-vecinos(Nodo,ListaVecinos,[]).
+
+vecinos(Nodo,[Vecino|LV],LAux):-
+    arista(Nodo,Vecino),
+    not(member(Vecino,LAux)),
+    append(LAux,[Vecino],LAux2),
+    vecinos(Nodo,LV,LAux2),!.
+vecinos(_,[],_).
